@@ -1,6 +1,10 @@
 # Install iperf3
 apt install -y iperf3
 
+# Allow firewall
+ufw allow 5201
+ufw reload
+
 # Create service bandwidth
 cat << EOF > /etc/systemd/system/bandwidth.service
 [Unit]
